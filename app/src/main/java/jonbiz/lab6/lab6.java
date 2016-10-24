@@ -4,10 +4,13 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,15 +27,39 @@ public class lab6 extends AppCompatActivity {
     public void buildGUI(){
         LinearLayout ll = (LinearLayout) this.findViewById(R.id.lab6);
 
-        TextView lbl_title = new TextView(this.getApplicationContext());
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        params.weight = 1.0f;
 
         // Title
+        TextView lbl_title = new TextView(this.getApplicationContext());
         lbl_title.setText(R.string.lbl_title);
         lbl_title.setGravity(Gravity.CENTER);
         lbl_title.setTextColor(Color.parseColor("#141414"));
         ll.addView(lbl_title);
 
-        //
+        //Frame layout
+        FrameLayout fl = new FrameLayout(this.getApplicationContext());
+
+        // Loan ammount
+        TextView lbl_loanamt = new TextView(this.getApplicationContext());
+        lbl_loanamt.setText(R.string.lbl_loanamt);
+        lbl_loanamt.setGravity(Gravity.LEFT);
+        lbl_loanamt.setLayoutParams(params);
+        lbl_loanamt.setTextColor(Color.parseColor("#141414"));
+
+        fl.addView(lbl_loanamt);
+
+        // Loan ammount input
+        EditText in_loanamt = new EditText(this.getApplicationContext());
+        in_loanamt.setInputType(InputType.TYPE_CLASS_NUMBER);
+        in_loanamt.setGravity(Gravity.RIGHT);
+        in_loanamt.setLayoutParams(params);
+        in_loanamt.setTextColor(Color.parseColor("#141414"));
+        fl.addView(in_loanamt);
+
+        ll.addView(fl);
+
     }
 
     public void onCalculateClick(View view){
