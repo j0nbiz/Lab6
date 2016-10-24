@@ -1,9 +1,14 @@
 package jonbiz.lab6;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +18,21 @@ public class lab6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lab6);
+        buildGUI();
+    }
+
+    public void buildGUI(){
+        LinearLayout ll = (LinearLayout) this.findViewById(R.id.lab6);
+
+        TextView lbl_title = new TextView(this.getApplicationContext());
+
+        // Title
+        lbl_title.setText(R.string.lbl_title);
+        lbl_title.setGravity(Gravity.CENTER);
+        lbl_title.setTextColor(Color.parseColor("#141414"));
+        ll.addView(lbl_title);
+
+        //
     }
 
     public void onCalculateClick(View view){
