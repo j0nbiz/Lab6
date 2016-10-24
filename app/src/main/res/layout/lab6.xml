@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_title"
+        android:id="@+id/lbl_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_loanamt"
+            android:id="@+id/lbl_loanamt"
+            android:layout_gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/in_loanamt"
+            android:layout_gravity="right|center_vertical"
+            android:inputType="numberDecimal" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_loanterm"
+            android:id="@+id/lbl_loanterm"
+            android:layout_gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/in_loanterm"
+            android:layout_gravity="right|center_vertical"
+            android:inputType="numberDecimal" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_loanint"
+            android:id="@+id/lbl_loanint"
+            android:layout_gravity="left|center_vertical" />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/in_loanint"
+            android:layout_gravity="right|center_vertical"
+            android:inputType="numberDecimal" />
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <Button
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cal"
+            android:id="@+id/btn_cal"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true"
+            android:onClick="onCalculateClick" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_clr"
+            android:id="@+id/btn_clr"
+            android:layout_gravity="right|center_vertical"
+            android:clickable="true"
+            android:onClick="onClearClick" />
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_results"
+        android:id="@+id/lbl_results"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_weight="0.16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_paytotal"
+            android:id="@+id/lbl_paytotal"
+            android:layout_gravity="left|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_payint"
+            android:id="@+id/lbl_payint"
+            android:layout_gravity="left|bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_paymonth"
+            android:id="@+id/lbl_paymonth"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/out_paymonth"
+            android:layout_gravity="right|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/out_paytotal"
+            android:layout_gravity="right|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/out_payint"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+
+</LinearLayout>

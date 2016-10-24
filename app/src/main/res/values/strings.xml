@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab6</string>
+    <string name="lbl_title">Loan Calculator</string>
+    <string name="lbl_loanamt">Loan Amount</string>
+    <string name="lbl_loanterm">Term of Loan (years)</string>
+    <string name="lbl_loanint">Yearly Interest Rate</string>
+    <string name="btn_cal">Calculate</string>
+    <string name="btn_clr">Clear</string>
+    <string name="lbl_results">Results</string>
+    <string name="lbl_paytotal">Total Payment</string>
+    <string name="lbl_payint">Total Interest</string>
+    <string name="lbl_paymonth">Monthly Payment</string>
+</resources>
